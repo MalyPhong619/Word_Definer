@@ -1,12 +1,13 @@
 class Word
-  attr_accessor :term, :definition
+
+
 
   def initialize(term, definition)
-      @term = word
-      @definition = definition
+    @term = term
+    @definition = definition
   end
 
   def word_term()
-    return @term
+    return @term + ": " + @definition
   end
 end
