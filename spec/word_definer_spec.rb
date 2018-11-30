@@ -1,5 +1,5 @@
 require ('rspec')
-require ('word_definer')
+require ('./app')
 
 describe("Word") do
   it("will initialize term and definition and return the term") do

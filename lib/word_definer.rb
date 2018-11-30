@@ -1,6 +1,7 @@
 class Word
+  @@list_of_terms = []
 
-  attr_accessor :term, :definition
+    attr_accessor :term, :definition
 
   def initialize(attributes)
     @term = attributes.fetch(:term)
