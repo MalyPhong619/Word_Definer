@@ -11,4 +11,13 @@ class Word
   def word_term()
     return @term + ": " + @definition
   end
+
+  def save()
+    @@list_of_terms.push(self)
+  end
+
+  def self.all()
+   @@list_of_terms.sort_by { |term| [:term]}
+  end
+
 end
