@@ -1,5 +1,3 @@
-<h1>Your very own dictionary</h1>
-
 <form action="/" method="post">
   <div class="form_group">
     <label for="input_term">Term: </label>
@@ -14,6 +12,7 @@
 
 <h2>Terms and Definitions</h2>
 <% @list_of_terms.each do |term|%>
-  <%= term.term %> <%= term.definition %></a>
+  <h3><%= term.term %></h3>
+    <!-- <p><%= term.definition %></p> -->
 
 <% end %>

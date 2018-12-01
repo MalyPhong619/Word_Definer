@@ -1,6 +1,5 @@
 require('sinatra')
 require('pry')
-
 require('./lib/word_definer')
 
 get ('/') do
