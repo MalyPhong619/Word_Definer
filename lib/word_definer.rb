@@ -16,4 +16,7 @@ class Word
    @@list_of_terms.sort_by { |term| [:term]}
   end
 
+  def word_term()
+    return @term + ": " + @definition
+  end
 end
