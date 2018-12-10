@@ -13,9 +13,9 @@ describe("Word") do
   end
 
   it("will push a second definition into an array based on Term") do
-    new_word = Word.new(:term=>"Apple", :definition=>"Round red fruit")
-    new_definition = Word.new(:term=> "Apple", :definition=> "Seedy center and juicy bite")
-    new_term = Word.new(:term=>"Orange", :definition=>"Round orange fruit")
-    expect(new_definition.save()).to(eq(["Round red fruit", "Seedy center and juicy bite"]))
+    new_word = Word.new(:term => "Apple", :definition => "Round red fruit")
+    new_definition = Word.new(:term => "Apple", :definition => "Seedy center and juicy bite")
+    new_term = Word.new(:term => "Orange", :definition => "Round orange fruit")
+    expect(new_term.save()).to(eq(["Round red fruit", "Seedy center and juicy bite"]))
   end
 end

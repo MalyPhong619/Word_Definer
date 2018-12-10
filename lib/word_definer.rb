@@ -17,7 +17,10 @@ class Word
   end
 
   def additional_definition
-    self.term == attributes.fetch(:term)
-    @@list_of_definitions.push(attributes.fetch(:definition))
+    if self.term == attributes.fetch(:term)
+      @@list_of_definitions.push(attributes.fetch(:definition))
+    end
   end
+
+
 end
