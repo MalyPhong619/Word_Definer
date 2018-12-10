@@ -20,6 +20,4 @@ class Word
     self.term == attributes.fetch(:term)
     @@list_of_definitions.push(attributes.fetch(:definition))
   end
-
-
 end
