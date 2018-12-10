@@ -9,6 +9,12 @@ class Word
   end
 
   def word_term()
-    return @term + ": " + @definition
+    @term + ": " + @definition
   end
+
+  def save
+    @@list_of_terms.push(self.definition)
+  end
+
+
 end
