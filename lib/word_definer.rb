@@ -1,5 +1,5 @@
 class Word
-  @@list_of_terms = []
+  @@list_of_definitions = []
 
     attr_accessor :term, :definition
 
@@ -8,12 +8,17 @@ class Word
     @definition = attributes.fetch(:definition)
   end
 
-  def word_term()
+  def word_term
     @term + ": " + @definition
   end
 
   def save
-    @@list_of_terms.push(self.definition)
+    @@list_of_definitions.push(self.definition)
+  end
+
+  def additional_definition
+    self.term == attributes.fetch(:term)
+    @@list_of_definitions.push(attributes.fetch(:definition))
   end
 
 
