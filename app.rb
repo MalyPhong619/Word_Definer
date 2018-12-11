@@ -13,12 +13,8 @@ post ('/') do
   @list_of_words = Word.all()
   input_term = params["input_term"]
   input_definition = params["input_definition"]
-  word = Word.new(:term=>input_term, :definitions=>input_definition)
+  word = Word.new({:term=>input_term, :definitions=>input_definition})
   word.save()
   @list_of_words = Word.all()
   erb(:input)
-end
-
-get ('/output/:id') do
-  @list_of_words = Word.all()
 end
