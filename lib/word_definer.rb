@@ -11,7 +11,7 @@ class Word
   end
 
   def save
-    @@word_id += 1
+    @id += 1
     @@list_of_words.push(self)
   end
 
@@ -23,5 +23,8 @@ class Word
     @definitions.push(new_definition)
   end
 
+  def self.clear
+    @@list_of_words = []
+  end
 
 end
