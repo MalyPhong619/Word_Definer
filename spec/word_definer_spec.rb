@@ -24,7 +24,6 @@ describe('Word') do
 
   describe('#self.all') do
     it('push all new class Word into an array of words') do
-      word = Word.new({:term=> 'Apple', :definition=> 'Round red fruit', :id=> nil})
       word2 = Word.new({:term=> 'Orange', :definition=> 'Round orange fruit', :id=> nil})
       word2.save
       expect(Word.all).to(eq([word, word2]))
