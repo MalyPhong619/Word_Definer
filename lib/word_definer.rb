@@ -12,6 +12,7 @@ class Word
 
   def save
     @@list_of_words.push(self)
+    @id = @id +1
   end
 
   def self.all
