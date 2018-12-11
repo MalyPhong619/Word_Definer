@@ -2,11 +2,11 @@ class Word
   @@list_of_words = []
   @@word_id = 1
 
-    attr_accessor :term, :definition, :id
+    attr_accessor :term, :definitions, :id
 
   def initialize(attributes)
     @term = attributes.fetch(:term)
-    @definitions = [attributes.fetch(:definition)]
+    @definitions = [attributes.fetch(:definitions)]
     @id = @@word_id
     @@word_id = @@word_id + 1
   end
