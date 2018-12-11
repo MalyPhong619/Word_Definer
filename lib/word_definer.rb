@@ -30,7 +30,7 @@ class Word
   def self.find(id)
     @@list_of_words.each do |term|
       if term.id == id.to_i
-        return term.term
+        return term
       end
     end
   end
