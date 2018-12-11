@@ -18,3 +18,7 @@ post ('/') do
   @list_of_words = Word.all()
   erb(:input)
 end
+
+get ('/output/:id') do
+  @list_of_words = Word.all()
+end
