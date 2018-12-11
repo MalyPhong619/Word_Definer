@@ -28,6 +28,8 @@ end
 post('/output/:id') do
   @list_of_words = Word.all()
   @word = Word.find(params[:id])
+  input_definition = params["input_definition"]
+  @word.add_definition(input_definition)
   @list_of_words = Word.all()
   erb(:output)
 end

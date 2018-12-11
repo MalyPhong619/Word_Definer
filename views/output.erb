@@ -1,8 +1,15 @@
-
 <h1><%= @word.term %></h1>
 
   <ul>
-        <% @word.definitions.each do |definition| %>
-          <li> <%= definition %></li>
+    <% @word.definitions.each do |definition| %>
+      <li> <%= definition %></li>
     <% end %>
   </ul>
+
+<form action="/output/<%=@word.id%>" method="post">
+  <div class="form_group">
+    <label for="input_definition">Definition: </label>
+    <input class="form-control" type="text" name="input_definition" id="input_definition">
+  </div>
+  <button type="submit" class="btn btn-info">Submit!</button>
+</form>
