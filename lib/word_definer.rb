@@ -8,10 +8,10 @@ class Word
     @term = attributes.fetch(:term)
     @definitions = [attributes.fetch(:definition)]
     @id = @@word_id
+    @@word_id = @@word_id + 1
   end
 
   def save
-    @id += 1
     @@list_of_words.push(self)
   end
 
