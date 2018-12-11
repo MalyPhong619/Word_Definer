@@ -5,19 +5,19 @@ class Word
 
   def initialize(attributes)
     @term = attributes.fetch(:term)
-    @definition = [attributes.fetch(:definition)]
-  end
-
-  def word_term
-    @term + ": " + @definition
+    @definitions = [attributes.fetch(:definition)]
   end
 
   def save
     @@list_of_words.push(self)
   end
+  def self.all()
+    @@list_of_words
+  end
 
-  def new_definition()
 
+  def add_definition(new_definition)
+    @definitions.push(new_definition)
   end
 
 
