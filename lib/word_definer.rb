@@ -28,11 +28,10 @@ class Word
   end
 
   def self.find(id)
-   word_id = id.to_i()
-    @@list_of_words.each do |word|
-     if word.id == word
-       word
-     end
+    @@list_of_words.each do |term|
+      if term.id == id.to_i
+        return term.term
+      end
     end
   end
 end

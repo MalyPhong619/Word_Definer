@@ -10,7 +10,6 @@ describe('Word') do
 
   describe('#initialize') do
     it('will intialize term, definitions and create new id for new Word') do
-      Word.clear
       word = Word.new({:term=> 'Apple', :definitions=> 'Round red fruit', :id=> nil})
       expect(word.term).to(eq('Apple'))
       expect(word.definitions).to(eq(['Round red fruit']))
@@ -48,6 +47,14 @@ describe('Word') do
       word = Word.new({:term=> 'Apple', :definitions=> 'Round red fruit', :id=> nil})
       Word.clear
       expect(Word.all).to(eq([]))
+    end
+  end
+
+  describe('#self.find') do
+    it('will find a word by id') do
+      word = Word.new({:term=> 'Apple', :definitions=> 'Round red fruit', :id=> nil})
+      word.save
+      expect(Word.find(8)).to(eq("Apple"))
     end
   end
 end

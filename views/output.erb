@@ -1,16 +1,3 @@
 <h1> Hey this works </h1>
 
-<h1>Term : <%= @word.term %></h1>
-
-
-
-<form action="/output/<%= @word.id %>" method="post">
-  <div class="form-group">
-    <label>Add definition</label>
-    <input type="text" name="input_definition">
-  </div>
-
-  <button type="submit" class="btn">Add definition</button>
-</form>
-
-<a href="/">go back home</a>
+<p><%= @word.term %></p>
