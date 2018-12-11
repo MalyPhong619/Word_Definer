@@ -14,7 +14,7 @@ describe('Word') do
       word = Word.new({:term=> 'Apple', :definitions=> 'Round red fruit', :id=> nil})
       expect(word.term).to(eq('Apple'))
       expect(word.definitions).to(eq(['Round red fruit']))
-      expect(word.id).to(eq(1))
+      expect(word.id).to(eq(2))
     end
   end
 
@@ -50,5 +50,4 @@ describe('Word') do
       expect(Word.all).to(eq([]))
     end
   end
-
 end

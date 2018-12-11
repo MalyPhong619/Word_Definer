@@ -1,6 +1,6 @@
 class Word
   @@list_of_words = []
-  @@word_id = 0
+  @@word_id = 1
 
     attr_accessor :term, :definitions, :id
 
