@@ -1,6 +1,8 @@
 require('sinatra')
-require('pry')
+require('sinatra/reloader')
+also_reload('lib/**/*.rb')
 require('./lib/word_definer')
+require('pry')
 
 get ('/') do
   @list_of_terms = Word.all()
