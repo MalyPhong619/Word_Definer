@@ -20,8 +20,8 @@ post('/') do
 end
 
 get('/output/:id') do
-  @word = Word.find(params[:id])
   @list_of_words = Word.all()
+  @word = Word.find(params[:id])
   erb(:output)
 end
 
