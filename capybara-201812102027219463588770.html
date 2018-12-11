@@ -1,4 +1,13 @@
-<form action="/" method="post">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Terms and  Definitions</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dictionary!</h1>
+      <form action="/" method="post">
   <div class="form_group">
     <label for="input_term">Term: </label>
     <input class="form-control" type="text" name="input_term" id="input_term">
@@ -11,10 +20,12 @@
 </form>
 
 <h2>Terms and Definitions</h2>
-<% @list_of_words.each do |term|%>
 <ul>
-  <a href="#"><%= term.term %></a>  
+  <a href="#">Apple</a>  
 </ul>
 
 
-<% end %>
+
+    </div>
+  </body>
+</html>
