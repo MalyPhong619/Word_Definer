@@ -8,6 +8,16 @@ describe('Word') do
     expect(Word.all).to(eq([]))
   end
 
+  describe('#initialize') do
+    it('will intialize term, definitions and create new id for new Word') do
+      Word.clear
+      word = Word.new({:term=> 'Apple', :definitions=> 'Round red fruit', :id=> nil})
+      expect(word.term).to(eq('Apple'))
+      expect(word.definitions).to(eq(['Round red fruit']))
+      expect(word.id).to(eq(1))
+    end
+  end
+
   describe('#save') do
     it('will push a new Word into an array of Words') do
       word = Word.new({:term=> 'Apple', :definitions=> 'Round red fruit', :id=> nil})
