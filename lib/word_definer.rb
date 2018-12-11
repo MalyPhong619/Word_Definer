@@ -27,4 +27,12 @@ class Word
     @@list_of_words = []
   end
 
+  def self.find(id)
+   word_id = id.to_i()
+    @@list_of_words.each do |word|
+     if word.id == word
+       word
+     end
+    end
+  end
 end

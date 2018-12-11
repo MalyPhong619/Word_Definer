@@ -1,0 +1,16 @@
+<form action="/output/<%= @word.id %>" method="post">
+  <h1> <%= @word.input_term %></h1>
+    <label for="input_definition">Definition: </label>
+    <input class="form-control" type="text" name="input_definition" id="input_definition">
+  </div>
+  <button type="submit" class="btn btn-info">Submit!</button>
+</form>
+
+<h2>Term and Definitions</h2>
+<% @list_of_words.each do |term|%>
+<ul>
+  <a href="/"><%= term.defintions %></a>
+</ul>
+
+
+<% end %>

@@ -10,10 +10,10 @@
   <button type="submit" class="btn btn-info">Submit!</button>
 </form>
 
-<h2>Terms and Definitions</h2>
+<h1>Terms</h1>
 <% @list_of_words.each do |term|%>
 <ul>
-  <a href="#"><%= term.term %></a>  
+  <a href="/output/<%= @term.id %>"><%= term.term %></a>
 </ul>
 
 
