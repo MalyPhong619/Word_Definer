@@ -24,3 +24,10 @@ get ('/output/:id') do
   @list_of_words = Word.all()
   erb(:output)
 end
+
+post ('/output/:id') do
+  @word = Word.find(params[:id])
+  @list_of_words = Word.all()
+  input_definition = params["input_definition"]
+  erb(:output)
+end
